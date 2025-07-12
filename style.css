@@ -1,0 +1,208 @@
+body {
+  perspective: 500px;
+  background-color: #e0e0e0;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.father {
+  width: 100%;
+  max-width: 350px;
+  height: 500px;
+  margin: 0 auto 30px;
+  position: relative;
+  transform-style: preserve-3d;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: all 0.6s ease-in-out;
+  border-radius: 11px;
+  cursor: pointer;
+}
+
+.father > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
+  border-radius: 11px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  backface-visibility: hidden;
+  padding: 0;
+  overflow: hidden;
+}
+
+.father .front {
+  z-index: 2;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.father .front::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 11px;
+  z-index: 1;
+}
+
+.father .front > * {
+  position: relative;
+  z-index: 2;
+}
+
+.father .back {
+  background-color: #212529;
+  color: #eee;
+  transform: rotateY(180deg);
+  z-index: 1;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.father:hover {
+  transform: rotateY(180deg);
+}
+
+.father header {
+  background-color: rgb(63, 81, 181);
+  color: white !important;
+  padding: 30px 20px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  border-radius: 11px 11px 0 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.father .front h3 {
+  margin: 0 0 20px 0;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  word-spacing: 0.4em;
+  font-weight: 600;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.father .front p {
+  font-size: 1rem;
+  margin: 0 20px 0 20px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  flex-grow: 1;
+}
+
+.father .back p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.father .back > div {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+.front-img-1 {
+  background-image: url("1.jpg");
+}
+
+.front-img-2 {
+  background-image: url("https://c0.wallpaperflare.com/preview/749/551/800/architecture-building-dome-castle.jpg");
+}
+
+.front-img-3 {
+  background-image: url("https://www.guidetouristique.tn/wp-content/uploads/2024/05/1b5af384-c3a2-421b-9f14-e5b6064a8fb9_lg.jpg");
+}
+
+.front-img-4 {
+  background-image: url("https://t3.ftcdn.net/jpg/03/76/76/98/360_F_376769841_NtucVQfydfODlEnfLDBWnL7SS5Qyp1s2.jpg");
+}
+
+.front-img-5 {
+  background-image: url("https://t4.ftcdn.net/jpg/00/54/59/55/360_F_54595547_hVUSl5nqHvAy9EIzMqAh15rYR31ZQevy.jpg");
+}
+
+.front-img-6 {
+  background-image: url("https://media.gettyimages.com/id/1387646066/fr/vid%C3%A9o/aerial-beautiful-view-of-town-on-hill-against-clear-sky-drone-flying-backwards-over-sea.jpg?s=640x640&k=20&c=z6BF3tR0tCwlR6DTsG0bXJHG78-t1VqUcZlkDfzKEYI=");
+}
+
+.row.justify-content-center {
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.header-custom {
+  margin-bottom: -0.04rem !important;
+}
+
+.flag-img {
+  width: 5%;
+  height: auto;
+  border-radius: 10%;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.hero-section {
+  padding: 0 !important;
+  margin: 0 !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.hero-subtitle {
+  color: white !important;
+}
+
+.fas.fa-star {
+  color: gold;
+}
+
+.far.fa-star {
+  color: #ccc;
+}
+
+.back {
+  padding: 0 !important;
+}
+
+.backContent {
+  color: white !important;
+  padding: 3%;
+}
+
+.myText {
+  font-family: "Oswaald", serif;
+}
